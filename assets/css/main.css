@@ -309,7 +309,7 @@ form input[type="submit"], form button, form input[type="reset"] {
     overflow: hidden;
     height: 0; }
   #cta {
-    background-image: url("../../images/slide-1.JPG");
+    background-image: url("../../images/slide-1.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
