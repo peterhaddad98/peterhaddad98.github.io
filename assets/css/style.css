@@ -1,0 +1,142 @@
+/*******************
+/*******************
+/*******************Buttons coded by HeroWP.com*************************/
+/*******************
+/*******************
+
+
+
+/*******************We add the Desired Fonts to CSS library*************************/
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../fonts/helvetica_neue_bold.eot');
+    src: url('../fonts/helvetica_neue_bold.eot') format('embedded-opentype'),
+         url('../fonts/helvetica_neue_bold.woff') format('woff'),
+         url('../fonts/helvetica_neue_bold.ttf') format('truetype'),
+         url('../fonts/helvetica_neue_bold.svg#HelveticaNeueBold') format('svg');
+}
+
+@font-face {
+    font-family: 'titillium_bdbold';
+    src: url('../fonts/titillium-bold-webfont.eot');
+    src: url('../fonts/titillium-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/titillium-bold-webfont.woff') format('woff'),
+         url('../fonts/titillium-bold-webfont.ttf') format('truetype'),
+         url('../fonts/titillium-bold-webfont.svg#titillium_bdbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*******************Body general styles*************************/
+
+
+
+.container{margin:0 auto; display:table; height:auto;}
+.margin_top{margin-top:20px;}
+
+/*******************Buttons general style*************************/
+
+p .button{
+
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+ 
+	font-size: 1.5em;
+    display: block;
+    padding: 10px;
+	margin:10px 20px 10px 0;
+	float:left;
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;	
+	border:solid 1px #ffffff;
+	
+	box-shadow: 0 0 3px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.8);
+	-moz-box-shadow: 0 0 3px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.8);
+	-webkit-box-shadow: 0 0 3px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.8);
+    
+	width: 180px;
+	text-align: center;	
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+
+/***********************
+.button:hover{
+    -webkit-box-shadow: 0px 3px 9px rgba(0,0,0,.35);
+    -moz-box-shadow: 0px 3px 9px rgba(0,0,0,.35);
+    box-shadow: 0px 3px 9px rgba(0,0,0,.35);
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+
+}
+************************/
+
+/*************************
+Buttons gradient color styles generated with http://www.colorzilla.com/gradient-editor/
+*************************/
+
+.yellow{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3e2c7+0,c19e67+50,b68d4c+51,e9d4b3+100;L+Brown+3D */
+background: #f3e2c7; /* Old browsers */
+background: -moz-linear-gradient(top, #f3e2c7 0%, #c19e67 50%, #b68d4c 51%, #e9d4b3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f3e2c7 0%,#c19e67 50%,#b68d4c 51%,#e9d4b3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', endColorstr='#e9d4b3',GradientType=0 ); /* IE6-9 */
+}
+
+.red{
+background: #f25a58; /* Old browsers */
+background: -moz-linear-gradient(top, #f25a58 0%, #d84240 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f25a58), color-stop(100%,#d84240)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f25a58 0%,#d84240 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f25a58 0%,#d84240 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f25a58 0%,#d84240 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f25a58 0%,#d84240 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f25a58', endColorstr='#d84240',GradientType=0 ); /* IE6-9 */
+}
+
+.blue{
+background: #87e0fd; /* Old browsers */
+background: -moz-linear-gradient(top, #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* IE10+ */
+background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+}
+
+.orange{
+background: #ffaf4b; /* Old browsers */
+background: -moz-linear-gradient(top, #ffaf4b 0%, #ff920a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffaf4b), color-stop(100%,#ff920a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffaf4b 0%,#ff920a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffaf4b 0%,#ff920a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffaf4b 0%,#ff920a 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffaf4b 0%,#ff920a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 ); /* IE6-9 */
+}
+
+.green{
+background: #d2ff52; /* Old browsers */
+background: -moz-linear-gradient(top, #d2ff52 0%, #91e842 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2ff52), color-stop(100%,#91e842)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #d2ff52 0%,#91e842 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #d2ff52 0%,#91e842 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #d2ff52 0%,#91e842 100%); /* IE10+ */
+background: linear-gradient(to bottom, #d2ff52 0%,#91e842 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
+}
+
