@@ -4,119 +4,17 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
 		<title>Fellowship Baptist Church</title>
-
 		<!-- Loading third party fonts -->
 		<link href="assets/fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
-		<link href="assets/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+		<script async src="https://use.fontawesome.com/a6ef32a6ec.js"></script>
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="assets/css/main.css">
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/TimeCircles/TimeCircles.js"></script>
-        <link rel="stylesheet" href="assets/TimeCircles/TimeCircles.css" />
-		<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
-
 	<script>
-	var curday;
-	var secTime;
-	var ticker;
-	function getSeconds() {
-	var nowDate = new Date();
-	var dy = 7 ; //Sunday through Sunday, 0 to 7
-	var countertime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),10,30,0); //10:30am
-	var curtime = nowDate.getTime(); //current time
-	var atime = countertime.getTime(); //countdown time
-	var diff = parseInt((atime - curtime)/1000);
-	if (diff > 0) { curday = dy - nowDate.getDay() }
-	else { curday = dy - nowDate.getDay() -1 } //after countdown time
-	if (curday < 0) { curday += 7; } //already after countdown time, switch to next week
-	if (diff <= 0) { diff += (86400 * 7) }
-	startTimer (diff);
-	}
-	function startTimer(secs) {
-	secTime = parseInt(secs);
-	ticker = setInterval("tick()",1000);
-	tick(); //initial count display
-	}
-	function tick() {
-	var secs = secTime;
-	if (secs>0) {
-	secTime--;
-	}
-	else {
-	clearInterval(ticker);
-	getSeconds(); //start over
-	}
-	var days = Math.floor(secs/86400);
-	secs %= 86400;
-	var hours= Math.floor(secs/3600);
-	secs %= 3600;
-	var mins = Math.floor(secs/60);
-	secs %= 60;
-	//update the time display
-	document.getElementById("days").innerHTML = curday;
-	document.getElementById("hours").innerHTML = ((hours < 10 ) ? "0" : "" ) + hours;
-	document.getElementById("minutes").innerHTML = ( (mins < 10) ? "0" : "" ) + mins;
-	document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
-	}
+	function getSeconds(){var e=new Date,t=7,n=new Date(e.getFullYear(),e.getMonth(),e.getDate(),10,30,0),r=e.getTime(),a=n.getTime(),c=parseInt((a-r)/1e3);curday=c>0?t-e.getDay():t-e.getDay()-1,0>curday&&(curday+=7),0>=c&&(c+=604800),startTimer(c)}function startTimer(e){secTime=parseInt(e),ticker=setInterval("tick()",1e3),tick()}function tick(){var e=secTime;e>0?secTime--:(clearInterval(ticker),getSeconds());Math.floor(e/86400);e%=86400;var t=Math.floor(e/3600);e%=3600;var n=Math.floor(e/60);e%=60,document.getElementById("days").innerHTML=curday,document.getElementById("hours").innerHTML=(10>t?"0":"")+t,document.getElementById("minutes").innerHTML=(10>n?"0":"")+n,document.getElementById("seconds").innerHTML=(10>e?"0":"")+e}var curday,secTime,ticker;
 	</script>
 	<style>
-	#countholder .link{
-	margin-top: 40px;
-	}
-	#countholder a{
-	display: inline-block;
-	color: #fff;
-	font-size: 20px;
-	padding: 20px;
-	background: #265;
-	border-radius: 10px;
-	text-decoration: none;
-	}
-	#countholder a:hover{
-	background: #487;
-	}
-	#countholder{
-	font-family: sans-serif;
-	color: #544531;
-	display: inline-block;
-	font-weight: 100;
-	text-align: center;
-	font-size: 48px;
-	background-color: #fff;
-	padding:20px;
-	border-radius: 6px;
-	margin-bottom:30px;
-	line-height: 1.4;
-	}
-	#countholder > div{
-	padding: 30px 60px;
-	border-radius: 3px;
-	background: #fff;
-	display: inline-block;
-	}
-	#countholder div > span{
-	border-radius: 3px;
-	background: #fff;
-	display: inline-block;
-	}
-	#countholder .smalltext{
-	padding-top: 0px;
-	font-size: 16px;
-	}
-
-	html, body{height: 100%;}
-
-	hr.vertical
-	{
-	   width: 0px;
-	   height: 100px; /* or height in PX */
-	} 
+	#countholder,#countholder a{display:inline-block;padding:20px}#countholder .link{margin-top:40px}#countholder a{color:#fff;font-size:20px;background:#265;border-radius:10px;text-decoration:none}#countholder a:hover{background:#487}#countholder{font-family:sans-serif;color:#544531;font-weight:100;text-align:center;font-size:48px;background-color:#fff;border-radius:6px;margin-bottom:30px;line-height:1.4}#countholder div>span,#countholder>div{border-radius:3px;background:#fff;display:inline-block}#countholder>div{padding:30px 60px}#countholder .smalltext{padding-top:0;font-size:16px}body,html{height:100%}hr.vertical{width:0;height:100px}
 	</style>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106147703-1"></script>
@@ -128,7 +26,6 @@
       gtag('config', 'UA-106147703-1');
     </script>
 	</head>
-
 
 	<body onload = "getSeconds()">
 
@@ -220,8 +117,6 @@
 									<div><span class="minutes" id="minutes"></span><hr><div class="smalltext">Minutes</div></div><hr style="display: inline-block;" class="vertical"/>
 									<div><span class="seconds" id="seconds"></span><hr><div class="smalltext">Seconds</div></div>
 								</center>
-
-
 						</div>
 					</div>
 				</div>
@@ -294,7 +189,6 @@
 							    });
 							</script>
 
-
 							</div>
 						</div>
 					</div> <!-- .row -->
@@ -305,40 +199,8 @@
 
 		</div>
 		
-		<script>
-		$("#DateCountdown").TimeCircles({
-		    "animation": "smooth",
-		    "bg_width": 1,
-		    "fg_width": 0.04,
-		    "circle_bg_color": "#EEEEEE",
-		    "time": {
-		        "Days": {
-		            "text": "Days",
-		            "color": "#CCCCCC",
-		            "show": true
-		        },
-		        "Hours": {
-		            "text": "Hours",
-		            "color": "#CCCCCC",
-		            "show": true
-		        },
-		        "Minutes": {
-		            "text": "Minutes",
-		            "color": "#CCCCCC",
-		            "show": true
-		        },
-		        "Seconds": {
-		            "text": "Seconds",
-		            "color": "#CCCCCC",
-		            "show": true
-		        }
-		    }
-		});
-		</script>
 		<script src="assets/js/jquery-1.11.1.min.js"></script>
 		<script src="assets/js/plugins.js"></script>
 		<script src="assets/js/app.js"></script>
-		
 	</body>
-
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+	<script>
+	var curday;
+	var secTime;
+	var ticker;
+	function getSeconds() {
+	var nowDate = new Date();
+	var dy = 7 ; //Sunday through Sunday, 0 to 7
+	var countertime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),10,30,0); //10:30am
+	var curtime = nowDate.getTime(); //current time
+	var atime = countertime.getTime(); //countdown time
+	var diff = parseInt((atime - curtime)/1000);
+	if (diff > 0) { curday = dy - nowDate.getDay() }
+	else { curday = dy - nowDate.getDay() -1 } //after countdown time
+	if (curday < 0) { curday += 7; } //already after countdown time, switch to next week
+	if (diff <= 0) { diff += (86400 * 7) }
+	startTimer (diff);
+	}
+	function startTimer(secs) {
+	secTime = parseInt(secs);
+	ticker = setInterval("tick()",1000);
+	tick(); //initial count display
+	}
+	function tick() {
+	var secs = secTime;
+	if (secs>0) {
+	secTime--;
+	}
+	else {
+	clearInterval(ticker);
+	getSeconds(); //start over
+	}
+	var days = Math.floor(secs/86400);
+	secs %= 86400;
+	var hours= Math.floor(secs/3600);
+	secs %= 3600;
+	var mins = Math.floor(secs/60);
+	secs %= 60;
+	//update the time display
+	document.getElementById("days").innerHTML = curday;
+	document.getElementById("hours").innerHTML = ((hours < 10 ) ? "0" : "" ) + hours;
+	document.getElementById("minutes").innerHTML = ( (mins < 10) ? "0" : "" ) + mins;
+	document.getElementById("seconds").innerHTML = ( (secs < 10) ? "0" : "" ) + secs;
+	}
+	</script>
+	<style>
+	#countholder .link{
+	margin-top: 40px;
+	}
+	#countholder a{
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	padding: 20px;
+	background: #265;
+	border-radius: 10px;
+	text-decoration: none;
+	}
+	#countholder a:hover{
+	background: #487;
+	}
+	#countholder{
+	font-family: sans-serif;
+	color: #544531;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 48px;
+	background-color: #fff;
+	padding:20px;
+	border-radius: 6px;
+	margin-bottom:30px;
+	line-height: 1.4;
+	}
+	#countholder > div{
+	padding: 30px 60px;
+	border-radius: 3px;
+	background: #fff;
+	display: inline-block;
+	}
+	#countholder div > span{
+	border-radius: 3px;
+	background: #fff;
+	display: inline-block;
+	}
+	#countholder .smalltext{
+	padding-top: 0px;
+	font-size: 16px;
+	}
+
+	html, body{height: 100%;}
+
+	hr.vertical
+	{
+	   width: 0px;
+	   height: 100px; /* or height in PX */
+	} 
+	</style>
+	</head>
+
+	<body onload = "getSeconds()">
+								<center><div id="countholder">
+									<div><span class="days" id="days"></span><hr><div class="smalltext">Days</div></div><hr style="display: inline-block;" class="vertical"/>
+									<div><span class="hours" id="hours"></span><hr><div class="smalltext">Hours</div></div><hr style="display: inline-block;" class="vertical"/>
+									<div><span class="minutes" id="minutes"></span><hr><div class="smalltext">Minutes</div></div><hr style="display: inline-block;" class="vertical"/>
+									<div><span class="seconds" id="seconds"></span><hr><div class="smalltext">Seconds</div></div>
+								</center>
+	</body>
+</html>
