@@ -13,7 +13,63 @@
 	function getSeconds(){var e=new Date,t=7,n=new Date(e.getFullYear(),e.getMonth(),e.getDate(),10,30,0),r=e.getTime(),a=n.getTime(),c=parseInt((a-r)/1e3);curday=c>0?t-e.getDay():t-e.getDay()-1,0>curday&&(curday+=7),0>=c&&(c+=604800),startTimer(c)}function startTimer(e){secTime=parseInt(e),ticker=setInterval("tick()",1e3),tick()}function tick(){var e=secTime;e>0?secTime--:(clearInterval(ticker),getSeconds());Math.floor(e/86400);e%=86400;var t=Math.floor(e/3600);e%=3600;var n=Math.floor(e/60);e%=60,document.getElementById("days").innerHTML=curday,document.getElementById("hours").innerHTML=(10>t?"0":"")+t,document.getElementById("minutes").innerHTML=(10>n?"0":"")+n,document.getElementById("seconds").innerHTML=(10>e?"0":"")+e}var curday,secTime,ticker;
 	</script>
 	<style>
-	#countholder,#countholder a{display:inline-block;padding:20px}#countholder .link{margin-top:40px}#countholder a{color:#fff;font-size:20px;background:#265;border-radius:10px;text-decoration:none}#countholder a:hover{background:#487}#countholder{font-family:sans-serif;color:#544531;font-weight:100;text-align:center;font-size:48px;background-color:#fff;border-radius:6px;margin-bottom:30px;line-height:1.4}#countholder div>span,#countholder>div{border-radius:3px;background:#fff;display:inline-block}#countholder>div{padding:30px 60px}#countholder .smalltext{padding-top:0;font-size:16px}body,html{height:100%}hr.vertical{width:0;height:100px}
+	#countholder .link{
+	margin-top: 40px;
+	}
+	#countholder a{
+	display: inline-block;
+	color: #fff;
+	font-size: 20px;
+	padding: 20px;
+	background: #265;
+	border-radius: 10px;
+	text-decoration: none;
+	}
+	#countholder a:hover{
+	background: #487;
+	}
+	#countholder{
+	font-family: sans-serif;
+	color: #544531;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 48px;
+	background-color: #fff;
+	padding:20px;
+	border-radius: 6px;
+	margin-bottom:30px;
+	line-height: 1.4;
+	}
+	#countholder > div{
+	padding: 30px 60px;
+	border-radius: 3px;
+	background: #fff;
+	display: inline-block;
+	}
+	#countholder div > span{
+	border-radius: 3px;
+	background: #fff;
+	display: inline-block;
+	}
+	#countholder .smalltext{
+	padding-top: 0px;
+	font-size: 16px;
+	}
+
+	html, body{height: 100%;}
+
+	hr.vertical
+	{
+	   width: 0px;
+	   height: 100px; /* or height in PX */
+	}
+	
+	@media (max-width: 768px) {
+	#countholder{
+		display: none;
+	}
+	}
 	</style>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106147703-1"></script>
