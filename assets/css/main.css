@@ -11,6 +11,12 @@ section,
 summary {
   display: block; }
 
+@media (max-width: 768px) {
+  #none{
+    display: none;
+  }
+  }
+  
 audio,
 canvas,
 video {
