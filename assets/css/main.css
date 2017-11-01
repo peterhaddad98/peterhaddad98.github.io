@@ -15,8 +15,11 @@ summary {
   #none{
     display: none;
   }
+  #smallmobile{
+    font-size: 8px;
   }
-  
+  }
+
 audio,
 canvas,
 video {
