@@ -93,7 +93,9 @@
 			    
 			    // get seconds
 			    s = parseInt( ms / 1000 );
-			    if (d == 1) {theSpan.innerHTML = d + ' day, ' + h + ' hours, ' + m + ' minutes, and ' + s + ' seconds.';} 
+			    if (d == 1 && h != 1) {theSpan.innerHTML = d + ' day, ' + h + ' hours, ' + m + ' minutes, and ' + s + ' seconds.';}
+			    else if (d == 1 && h == 1) {theSpan.innerHTML = d + ' day, ' + h + ' hour, ' + m + ' minutes, and ' + s + ' seconds.';}
+			    else if (d != 1 && h == 1) {theSpan.innerHTML = d + ' days, ' + h + ' hour, ' + m + ' minutes, and ' + s + ' seconds.';}
 			    else {theSpan.innerHTML = d + ' days, ' + h + ' hours, ' + m + ' minutes, and ' + s + ' seconds.';}
 
 			    setTimeout( 'updateTimeSpan()', 100 );
