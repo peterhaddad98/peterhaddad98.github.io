@@ -218,7 +218,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
-  font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
   font-weight: 500;
   text-transform: uppercase;
   line-height: normal; }
@@ -295,7 +294,6 @@ form input[type="submit"], form button, form input[type="reset"] {
   border-radius: 5px;
   color: #715b3e;
   text-transform: uppercase;
-  font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
   font-weight: 400;
   line-height: normal; }
   .button.secondary, form input.secondary[type="submit"], form button.secondary, form input.secondary[type="reset"] {
@@ -1186,7 +1184,6 @@ form input[type="submit"], form button, form input[type="reset"] {
     background: none;
     padding: 20px;
     display: none;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
     text-transform: uppercase;
     outline: none; }
     @media screen and (max-width: 990px) {
@@ -1207,7 +1204,6 @@ form input[type="submit"], form button, form input[type="reset"] {
         display: block;
         padding: 20px 0;
         text-transform: uppercase;
-        font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 18px;
         font-size: 1.2857142857em;
@@ -1237,7 +1233,6 @@ form input[type="submit"], form button, form input[type="reset"] {
       .mobile-navigation .menu .menu-item:first-child {
         border-top: 1px solid #e5e5e5; }
     .mobile-navigation .menu a {
-      font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
       text-transform: uppercase;
       font-weight: 400;
       display: block;
@@ -1266,7 +1261,6 @@ form input[type="submit"], form button, form input[type="reset"] {
       padding: 150px 0; }
     .hero .slides .slide-content {
       text-align: center;
-      font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
       text-transform: uppercase;
       color: white; }
     .hero .slides .slide-subtitle {
@@ -1362,7 +1356,6 @@ p img:hover {
     color: #a59e95;
     font-size: 12px;
     font-size: 0.8571428571em;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
     text-transform: lowercase; }
     .news .date .fa {
       font-size: 16px;
@@ -1393,7 +1386,6 @@ p img:hover {
     font-size: 0.8571428571em;
     font-weight: 400;
     text-transform: uppercase;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
     text-transform: lowercase;
     *zoom: 1; }
     .event-list .event-meta:after {
@@ -1451,8 +1443,7 @@ p img:hover {
   .seremon-list .seremon-meta {
     font-size: 12px;
     font-size: 0.8571428571em;
-    color: #a59e95;
-    font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif; }
+    color: #a59e95; }
     .seremon-list .seremon-meta .pastor {
       margin-bottom: 5px; }
     .seremon-list .seremon-meta .fa {
